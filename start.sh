@@ -1,0 +1,1 @@
+sh python3 bilibili_rename_video.py
