@@ -39,7 +39,9 @@ def rename_video_cp_new_folder():
                 info = re.search("\d+.info", item)
                 # print(item)
                 # infp_name = info.string.split(".")[0]
-                # print(info.string)
+                print(info.string)
+                print(info.string.split('.')[0] + "_" + video_fold.split('/')[-1] + ".mp4")
+                video_name = info.string.split('.')[0] + "_" + video_fold.split('/')[-1] + "_0.mp4"
 
                 info_path = os.path.abspath(video_fold + '/' + info.string)
                 # print(info_path)
@@ -54,7 +56,7 @@ def rename_video_cp_new_folder():
                 # print(info.string)
                 # copy(audio, os.curdir() + "/video/" + audio)
                 # print(video.string)
-                shutil.copyfile(video_fold + "/video.mp4",
+                shutil.copyfile(video_fold + "/" + video_name,
                                 "video/" + video_rename)
                 # print(video_fold + "/video.mp4")
                 # print(os.getcwd() + "/video/" + video_name + ".mp4")
